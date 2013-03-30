@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5243293C1707491900164B6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243293B1707491900164B6C /* CoreLocation.framework */; };
 		526931C417073A790060F521 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526931C317073A790060F521 /* MapKit.framework */; };
 		5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CC17070C7500E0F243 /* UIKit.framework */; };
 		5294F8CF17070C7500E0F243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CE17070C7500E0F243 /* Foundation.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5243293B1707491900164B6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		526931C317073A790060F521 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5294F8C917070C7500E0F243 /* happyhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5294F8CC17070C7500E0F243 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 			files = (
 				5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */,
 				526931C417073A790060F521 /* MapKit.framework in Frameworks */,
+				5243293C1707491900164B6C /* CoreLocation.framework in Frameworks */,
 				5294F8CF17070C7500E0F243 /* Foundation.framework in Frameworks */,
 				5294F8D117070C7500E0F243 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -107,6 +110,7 @@
 		5294F8C017070C7500E0F243 = {
 			isa = PBXGroup;
 			children = (
+				5243293B1707491900164B6C /* CoreLocation.framework */,
 				5294F8D217070C7500E0F243 /* happyhour */,
 				5294F90A17070C7500E0F243 /* happyhourTests */,
 				5294F8CB17070C7500E0F243 /* Frameworks */,
@@ -448,8 +452,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "happyhour/happyhour-Prefix.pch";
 				INFOPLIST_FILE = "happyhour/happyhour-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -460,8 +465,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "happyhour/happyhour-Prefix.pch";
 				INFOPLIST_FILE = "happyhour/happyhour-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
