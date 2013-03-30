@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526931C417073A790060F521 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526931C317073A790060F521 /* MapKit.framework */; };
 		5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CC17070C7500E0F243 /* UIKit.framework */; };
 		5294F8CF17070C7500E0F243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CE17070C7500E0F243 /* Foundation.framework */; };
 		5294F8D117070C7500E0F243 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8D017070C7500E0F243 /* CoreGraphics.framework */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526931C317073A790060F521 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5294F8C917070C7500E0F243 /* happyhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5294F8CC17070C7500E0F243 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5294F8CE17070C7500E0F243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */,
+				526931C417073A790060F521 /* MapKit.framework in Frameworks */,
 				5294F8CF17070C7500E0F243 /* Foundation.framework in Frameworks */,
 				5294F8D117070C7500E0F243 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -123,6 +126,7 @@
 		5294F8CB17070C7500E0F243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				526931C317073A790060F521 /* MapKit.framework */,
 				5294F8CC17070C7500E0F243 /* UIKit.framework */,
 				5294F8CE17070C7500E0F243 /* Foundation.framework */,
 				5294F8D017070C7500E0F243 /* CoreGraphics.framework */,
@@ -515,6 +519,7 @@
 				5294F91717070C7500E0F243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5294F91817070C7500E0F243 /* Build configuration list for PBXNativeTarget "happyhourTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				5294F91A17070C7500E0F243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
