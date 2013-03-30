@@ -21,15 +21,25 @@
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
+
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+
     return self;
 }
-							
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *newLocation = [locations lastObject];
+    NSLog(@"new location %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    NSLog(@"Testing one-two-three, lol I'm a map");
 }
 
 - (void)didReceiveMemoryWarning
