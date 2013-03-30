@@ -3,7 +3,7 @@
 //  happyhour
 //
 //  Created by John Kraal on 3/30/13.
-//  Copyright (c) 2013 fancyappes. All rights reserved.
+//  Copyright (c) 2013 indieappes. All rights reserved.
 //
 
 #import "AppDelegate.h"
