@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Testing one-two-three, lol I'm a map");
 }
 
 - (void)didReceiveMemoryWarning
