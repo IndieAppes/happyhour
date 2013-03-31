@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "UpdateManager.h"
 
 @interface FirstViewController ()
 
@@ -25,10 +26,15 @@
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
-    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"UpdateDistanceFilter"] intValue];
+    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle]
+                                                infoDictionary]
+                                               objectForKey:@"UpdateDistanceFilter"]
+                                              intValue];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
 
+    UpdateManager *updateManager = [[UpdateManager alloc] init];
+    
     return self;
 }
 

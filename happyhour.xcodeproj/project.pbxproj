@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5231BC6A17089CBC00B98E4A /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231BC6917089CBC00B98E4A /* UpdateManager.m */; };
 		5243293C1707491900164B6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243293B1707491900164B6C /* CoreLocation.framework */; };
 		526931C417073A790060F521 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526931C317073A790060F521 /* MapKit.framework */; };
 		5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CC17070C7500E0F243 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5231BC6817089CBC00B98E4A /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManager.h; sourceTree = "<group>"; };
+		5231BC6917089CBC00B98E4A /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManager.m; sourceTree = "<group>"; };
 		5243293B1707491900164B6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		526931C317073A790060F521 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5294F8C917070C7500E0F243 /* happyhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				5294F8F017070C7500E0F243 /* second@2x.png */,
 				5294F8F217070C7500E0F243 /* FirstViewController_iPhone.xib */,
 				5294F8F517070C7500E0F243 /* FirstViewController_iPad.xib */,
+				5231BC6817089CBC00B98E4A /* UpdateManager.h */,
+				5231BC6917089CBC00B98E4A /* UpdateManager.m */,
 				5294F8D317070C7500E0F243 /* Supporting Files */,
 			);
 			path = happyhour;
@@ -301,6 +306,7 @@
 				5294F8D917070C7500E0F243 /* main.m in Sources */,
 				5294F8DD17070C7500E0F243 /* AppDelegate.m in Sources */,
 				5294F8E617070C7500E0F243 /* FirstViewController.m in Sources */,
+				5231BC6A17089CBC00B98E4A /* UpdateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
