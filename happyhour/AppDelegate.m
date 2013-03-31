@@ -10,8 +10,6 @@
 
 #import "FirstViewController.h"
 
-#import "SecondViewController.h"
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
