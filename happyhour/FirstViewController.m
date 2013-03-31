@@ -22,10 +22,10 @@
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
-
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
-    locationManager.distanceFilter = (double)25.0;
+    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"UpdateDistanceFilter"] intValue];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
 
