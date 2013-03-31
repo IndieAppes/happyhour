@@ -14,7 +14,8 @@
 
 @implementation FirstViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -24,16 +25,19 @@
 
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.distanceFilter = (double)25.0;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
 
     return self;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
     CLLocation *newLocation = [locations lastObject];
-    NSLog(@"new location %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    NSLog(@"new location %f %f",
+          newLocation.coordinate.latitude,
+          newLocation.coordinate.longitude);
 }
 
 - (void)viewDidLoad
