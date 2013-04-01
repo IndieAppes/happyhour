@@ -17,5 +17,6 @@
 - (NSURL*)getUpdateURL;
 - (void)updateBars;
 - (void)checkForNewHappyHours;
+- (CLLocationCoordinate2D)getCurrentLocation;
 
 @end

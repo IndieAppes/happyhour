@@ -7,13 +7,26 @@
 //
 
 #import "FirstViewController.h"
-#import "UpdateManager.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface FirstViewController ()
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
 @implementation FirstViewController
+
+@synthesize updateManager;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
+        updateManager:(UpdateManager*)sentUpdateManager
+{
+    self.updateManager = sentUpdateManager;
+    return [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self.mapView setCenterCoordinate:coord animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

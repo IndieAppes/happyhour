@@ -31,13 +31,17 @@
 {
     localBars = [[NSArray alloc] initWithObjects:@"dicks",
                  @"dongues", @"YOSPOS", @"BITCH", nil];
-    NSLog(@"Updated bars");
+    NSLog(@"Updating bars near %f %f",
+          self.locationDelegate.lastKnownLatitude,
+          self.locationDelegate.lastKnownLongitude);
     
     NSString *postData = [[NSString alloc]
                           initWithFormat:@"latitude=%.6f&longitude=%.6f",
                           self.locationDelegate.lastKnownLatitude,
                           self.locationDelegate.lastKnownLongitude];
-    
+    NSLog(@"latitude=%.6f&longitude=%.6f",
+          self.locationDelegate.lastKnownLatitude,
+          self.locationDelegate.lastKnownLongitude);
     Download *dl = [[Download alloc] init];
     [dl postToURL:[self getUpdateURL]
          postdata:[postData dataUsingEncoding:NSUTF8StringEncoding]
@@ -74,6 +78,14 @@
 - (void)failedToRetrieveBars:(id)errorObject
 {
     NSLog(@"failed to retrieve local bars.");
+}
+
+- (CLLocationCoordinate2D)getCurrentLocation
+{
+    CLLocationCoordinate2D coord;
+    coord.latitude = self.locationDelegate.lastKnownLatitude;
+    coord.longitude = self.locationDelegate.lastKnownLongitude;
+    return coord;
 }
 
 @end

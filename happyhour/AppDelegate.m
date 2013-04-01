@@ -14,21 +14,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    locationDelegate = [[LocationDelegate alloc] init];
+    updateManager = [[UpdateManager alloc] init];
+    updateManager.locationDelegate = locationDelegate;
+    
     UIViewController *viewController1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
+        viewController1 = [[FirstViewController alloc]
+                           initWithNibName:@"FirstViewController_iPhone"
+                           bundle:nil
+                           updateManager:updateManager];
     } else {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
+        viewController1 = [[FirstViewController alloc]
+                           initWithNibName:@"FirstViewController_iPad"
+                           bundle:nil
+                           updateManager:updateManager];
     }
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[viewController1];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-
-    locationDelegate = [[LocationDelegate alloc] init];
-    updateManager = [[UpdateManager alloc] init];
-    updateManager.locationDelegate = locationDelegate;
     
     // Set up global Location Manager.
     locationManager = [[CLLocationManager alloc] init];

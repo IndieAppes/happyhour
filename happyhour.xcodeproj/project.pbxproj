@@ -49,6 +49,10 @@
 /* Begin PBXFileReference section */
 		521F0BAB1709A06700F12691 /* LocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDelegate.h; sourceTree = "<group>"; };
 		521F0BAC1709A06700F12691 /* LocationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDelegate.m; sourceTree = "<group>"; };
+		521F0BC91709E2B400F12691 /* Grote Markt 27, The Hague, NL.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Grote Markt 27, The Hague, NL.gpx"; sourceTree = "<group>"; };
+		521F0BCB1709E2DA00F12691 /* Leeds Uni, Leeds, UK.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Leeds Uni, Leeds, UK.gpx"; sourceTree = "<group>"; };
+		521F0BCC1709E2EB00F12691 /* Plein, The Hague, NL.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Plein, The Hague, NL.gpx"; sourceTree = "<group>"; };
+		521F0BD11709E95000F12691 /* Grote Markt 1, The Hague, NL.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Grote Markt 1, The Hague, NL.gpx"; sourceTree = "<group>"; };
 		5231BC6817089CBC00B98E4A /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManager.h; sourceTree = "<group>"; };
 		5231BC6917089CBC00B98E4A /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManager.m; sourceTree = "<group>"; };
 		5231BC881708C23300B98E4A /* Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
@@ -112,6 +116,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521F0BCA1709E2C200F12691 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				521F0BC91709E2B400F12691 /* Grote Markt 27, The Hague, NL.gpx */,
+				521F0BD11709E95000F12691 /* Grote Markt 1, The Hague, NL.gpx */,
+				521F0BCB1709E2DA00F12691 /* Leeds Uni, Leeds, UK.gpx */,
+				521F0BCC1709E2EB00F12691 /* Plein, The Hague, NL.gpx */,
+			);
+			name = GPX;
+			sourceTree = "<group>";
+		};
+		521F0BCD1709E87D00F12691 /* Imagery */ = {
+			isa = PBXGroup;
+			children = (
+				5294F8E917070C7500E0F243 /* first@2x.png */,
+				5294F8E717070C7500E0F243 /* first.png */,
+				5294F8EE17070C7500E0F243 /* second.png */,
+				5294F8F017070C7500E0F243 /* second@2x.png */,
+			);
+			name = Imagery;
+			sourceTree = "<group>";
+		};
+		521F0BCE1709E89200F12691 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5294F8E417070C7500E0F243 /* FirstViewController.h */,
+				5294F8E517070C7500E0F243 /* FirstViewController.m */,
+				5294F8F217070C7500E0F243 /* FirstViewController_iPhone.xib */,
+				5294F8F517070C7500E0F243 /* FirstViewController_iPad.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		521F0BCF1709E8A000F12691 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52B2E6501708C46E000A56FC /* Bar.h */,
+				52B2E6511708C46E000A56FC /* Bar.m */,
+				5231BC881708C23300B98E4A /* Download.h */,
+				5231BC891708C23300B98E4A /* Download.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		521F0BD01709E8A800F12691 /* Stuff that does work */ = {
+			isa = PBXGroup;
+			children = (
+				521F0BAB1709A06700F12691 /* LocationDelegate.h */,
+				521F0BAC1709A06700F12691 /* LocationDelegate.m */,
+				5231BC6817089CBC00B98E4A /* UpdateManager.h */,
+				5231BC6917089CBC00B98E4A /* UpdateManager.m */,
+			);
+			name = "Stuff that does work";
+			sourceTree = "<group>";
+		};
 		5294F8C017070C7500E0F243 = {
 			isa = PBXGroup;
 			children = (
@@ -149,22 +208,11 @@
 			children = (
 				5294F8DB17070C7500E0F243 /* AppDelegate.h */,
 				5294F8DC17070C7500E0F243 /* AppDelegate.m */,
-				52B2E6501708C46E000A56FC /* Bar.h */,
-				52B2E6511708C46E000A56FC /* Bar.m */,
-				5231BC881708C23300B98E4A /* Download.h */,
-				5231BC891708C23300B98E4A /* Download.m */,
-				5294F8E417070C7500E0F243 /* FirstViewController.h */,
-				5294F8E517070C7500E0F243 /* FirstViewController.m */,
-				5294F8E717070C7500E0F243 /* first.png */,
-				5294F8E917070C7500E0F243 /* first@2x.png */,
-				5294F8F217070C7500E0F243 /* FirstViewController_iPhone.xib */,
-				5294F8F517070C7500E0F243 /* FirstViewController_iPad.xib */,
-				521F0BAB1709A06700F12691 /* LocationDelegate.h */,
-				521F0BAC1709A06700F12691 /* LocationDelegate.m */,
-				5294F8EE17070C7500E0F243 /* second.png */,
-				5294F8F017070C7500E0F243 /* second@2x.png */,
-				5231BC6817089CBC00B98E4A /* UpdateManager.h */,
-				5231BC6917089CBC00B98E4A /* UpdateManager.m */,
+				521F0BCF1709E8A000F12691 /* Helpers */,
+				521F0BCE1709E89200F12691 /* Views */,
+				521F0BD01709E8A800F12691 /* Stuff that does work */,
+				521F0BCD1709E87D00F12691 /* Imagery */,
+				521F0BCA1709E2C200F12691 /* GPX */,
 				5294F8D317070C7500E0F243 /* Supporting Files */,
 			);
 			path = happyhour;

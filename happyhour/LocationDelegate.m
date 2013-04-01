@@ -34,6 +34,8 @@
 
     self.lastKnownLatitude = newLocation.coordinate.latitude;
     self.lastKnownLongitude = newLocation.coordinate.longitude;
+    
+    NSLog(@"Boing: %f %f", self.lastKnownLatitude, self.lastKnownLongitude);
 }
 
 @end

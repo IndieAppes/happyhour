@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UpdateManager.h"
 
 @interface FirstViewController : UIViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
+        updateManager:(UpdateManager*)updateManager;
+
+@property (strong, atomic) UpdateManager *updateManager;
 
 @end
