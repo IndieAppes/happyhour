@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
-#import "LocationDelegate.h"
 
 @implementation AppDelegate
 
@@ -27,11 +26,11 @@
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    LocationDelegate *locDel = [[LocationDelegate alloc] init];
+    locationDelegate = [[LocationDelegate alloc] init];
     
     // Set up global Location Manager.
     locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = locDel;
+    locationManager.delegate = locationDelegate;
     locationManager.distanceFilter = (double)[[[[NSBundle mainBundle]
                                                 infoDictionary]
                                                objectForKey:@"UpdateDistanceFilter"]

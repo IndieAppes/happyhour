@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "LocationDelegate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
     CLLocationManager *locationManager;
+    LocationDelegate *locationDelegate;
 }
 
 @property (strong, nonatomic) UIWindow *window;
