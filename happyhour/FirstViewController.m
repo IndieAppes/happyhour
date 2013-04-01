@@ -43,7 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.mapView setCenterCoordinate:coord animated:YES];
+    CLLocationCoordinate2D coord = [self.updateManager getCurrentLocation];
+    [self.mapView setCenterCoordinate:coord animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
