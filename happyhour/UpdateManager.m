@@ -18,7 +18,6 @@
     NSURL *base = [[NSURL alloc] initWithString:[[[NSBundle mainBundle] infoDictionary]
                       objectForKey:@"UpdateServer"]];
     NSURL *url = [NSURL URLWithString:path relativeToURL:base];
-    NSLog(@"Check this URL out: %@", [url absoluteString]);
     
     return url;
 }

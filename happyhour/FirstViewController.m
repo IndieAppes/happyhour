@@ -24,38 +24,17 @@
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle]
-                                                infoDictionary]
-                                               objectForKey:@"UpdateDistanceFilter"]
-                                              intValue];
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager startUpdatingLocation];
-
-    UpdateManager *updateManager = [[UpdateManager alloc] init];
-    
     return self;
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations {
-    CLLocation *newLocation = [locations lastObject];
-    NSLog(@"new location %f %f",
-          newLocation.coordinate.latitude,
-          newLocation.coordinate.longitude);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

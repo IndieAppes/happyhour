@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "FirstViewController.h"
+#import "LocationDelegate.h"
 
 @implementation AppDelegate
 
@@ -26,6 +26,18 @@
     self.tabBarController.viewControllers = @[viewController1];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+
+    LocationDelegate *locDel = [[LocationDelegate alloc] init];
+    
+    // Set up global Location Manager.
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = locDel;
+    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle]
+                                                infoDictionary]
+                                               objectForKey:@"UpdateDistanceFilter"]
+                                              intValue];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 
     return YES;
 }

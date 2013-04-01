@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521F0BAD1709A06700F12691 /* LocationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 521F0BAC1709A06700F12691 /* LocationDelegate.m */; };
 		5231BC6A17089CBC00B98E4A /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231BC6917089CBC00B98E4A /* UpdateManager.m */; };
+		5231BC8A1708C23300B98E4A /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231BC891708C23300B98E4A /* Download.m */; };
 		5243293C1707491900164B6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243293B1707491900164B6C /* CoreLocation.framework */; };
 		526931C417073A790060F521 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526931C317073A790060F521 /* MapKit.framework */; };
 		5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CC17070C7500E0F243 /* UIKit.framework */; };
@@ -31,6 +33,7 @@
 		5294F90717070C7500E0F243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CE17070C7500E0F243 /* Foundation.framework */; };
 		5294F90F17070C7500E0F243 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5294F90D17070C7500E0F243 /* InfoPlist.strings */; };
 		5294F91217070C7500E0F243 /* happyhourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294F91117070C7500E0F243 /* happyhourTests.m */; };
+		52B2E6521708C46E000A56FC /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B2E6511708C46E000A56FC /* Bar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521F0BAB1709A06700F12691 /* LocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDelegate.h; sourceTree = "<group>"; };
+		521F0BAC1709A06700F12691 /* LocationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDelegate.m; sourceTree = "<group>"; };
 		5231BC6817089CBC00B98E4A /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManager.h; sourceTree = "<group>"; };
 		5231BC6917089CBC00B98E4A /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManager.m; sourceTree = "<group>"; };
+		5231BC881708C23300B98E4A /* Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
+		5231BC891708C23300B98E4A /* Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Download.m; sourceTree = "<group>"; };
 		5243293B1707491900164B6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		526931C317073A790060F521 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5294F8C917070C7500E0F243 /* happyhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,8 @@
 		5294F90E17070C7500E0F243 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5294F91017070C7500E0F243 /* happyhourTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = happyhourTests.h; sourceTree = "<group>"; };
 		5294F91117070C7500E0F243 /* happyhourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = happyhourTests.m; sourceTree = "<group>"; };
+		52B2E6501708C46E000A56FC /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		52B2E6511708C46E000A56FC /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +149,14 @@
 			children = (
 				5294F8DB17070C7500E0F243 /* AppDelegate.h */,
 				5294F8DC17070C7500E0F243 /* AppDelegate.m */,
+				52B2E6501708C46E000A56FC /* Bar.h */,
+				52B2E6511708C46E000A56FC /* Bar.m */,
+				5231BC881708C23300B98E4A /* Download.h */,
+				5231BC891708C23300B98E4A /* Download.m */,
 				5294F8E417070C7500E0F243 /* FirstViewController.h */,
 				5294F8E517070C7500E0F243 /* FirstViewController.m */,
+				521F0BAB1709A06700F12691 /* LocationDelegate.h */,
+				521F0BAC1709A06700F12691 /* LocationDelegate.m */,
 				5294F8E717070C7500E0F243 /* first.png */,
 				5294F8E917070C7500E0F243 /* first@2x.png */,
 				5294F8EE17070C7500E0F243 /* second.png */,
@@ -307,6 +322,9 @@
 				5294F8DD17070C7500E0F243 /* AppDelegate.m in Sources */,
 				5294F8E617070C7500E0F243 /* FirstViewController.m in Sources */,
 				5231BC6A17089CBC00B98E4A /* UpdateManager.m in Sources */,
+				5231BC8A1708C23300B98E4A /* Download.m in Sources */,
+				52B2E6521708C46E000A56FC /* Bar.m in Sources */,
+				521F0BAD1709A06700F12691 /* LocationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
