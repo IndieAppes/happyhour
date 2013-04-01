@@ -13,6 +13,7 @@
 
 @property double lastKnownLatitude;
 @property double lastKnownLongitude;
+@property BOOL movedQuiteABit;
 
 - (void)locationManager:(CLLocationManager *)manage didUpdateLocations:(NSArray *)locations;
 

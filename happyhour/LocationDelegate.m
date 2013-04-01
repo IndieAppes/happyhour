@@ -12,18 +12,28 @@
 
 @synthesize lastKnownLatitude;
 @synthesize lastKnownLongitude;
+@synthesize movedQuiteABit;
 
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = [locations lastObject];
+    CLLocation *oldLocation = [[CLLocation alloc]
+                               initWithLatitude:self.lastKnownLatitude
+                               longitude:self.lastKnownLongitude];
+    CLLocationDistance dist = [newLocation distanceFromLocation:oldLocation];
+    
+    double distanceFilter = (double)[[[[NSBundle mainBundle]
+                                       infoDictionary]
+                                      objectForKey:@"UpdateDistanceFilter"]
+                                     intValue];
+    
+    if (dist > distanceFilter) {
+        self.movedQuiteABit = YES;
+    }
 
     self.lastKnownLatitude = newLocation.coordinate.latitude;
     self.lastKnownLongitude = newLocation.coordinate.longitude;
-    
-    NSLog(@"new location %f %f",
-          newLocation.coordinate.latitude,
-          newLocation.coordinate.longitude);
 }
 
 @end

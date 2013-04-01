@@ -30,6 +30,8 @@
 {
     localBars = [[NSArray alloc] initWithObjects:@"dicks",
                  @"dongues", @"YOSPOS", @"BITCH", nil];
+    NSLog(@"Updated bars");
+    self.locationDelegate.movedQuiteABit = NO;
 }
 
 - (NSArray *)getBarsNearMe
@@ -39,9 +41,14 @@
 
 - (void)checkForNewHappyHours
 {
-    NSLog(@"Checking happy hours near %f %f",
-          self.locationDelegate.lastKnownLatitude,
-          self.locationDelegate.lastKnownLongitude);
+    if (self.locationDelegate.movedQuiteABit == YES) {
+        [self updateBars];
+    }
+    else {
+        NSLog(@"Checking happy hours near %f %f",
+              self.locationDelegate.lastKnownLatitude,
+              self.locationDelegate.lastKnownLongitude);
+    }
 }
 
 @end
