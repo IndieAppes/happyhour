@@ -7,6 +7,7 @@
 //
 
 #import "UpdateManager.h"
+#import "Download.h"
 
 @implementation UpdateManager
 
@@ -22,7 +23,7 @@
                                                   infoDictionary]
                                                  objectForKey:@"UpdateServer"]];
     NSURL *url = [NSURL URLWithString:path relativeToURL:base];
-    
+
     return url;
 }
 
@@ -31,6 +32,19 @@
     localBars = [[NSArray alloc] initWithObjects:@"dicks",
                  @"dongues", @"YOSPOS", @"BITCH", nil];
     NSLog(@"Updated bars");
+    
+    NSString *postData = [[NSString alloc]
+                          initWithFormat:@"latitude=%.6f&longitude=%.6f",
+                          self.locationDelegate.lastKnownLatitude,
+                          self.locationDelegate.lastKnownLongitude];
+    
+    Download *dl = [[Download alloc] init];
+    [dl postToURL:[self getUpdateURL]
+         postdata:[postData dataUsingEncoding:NSUTF8StringEncoding]
+         delegate:self
+        onSuccess:@selector(retrievedBars:)
+           onFail:@selector(failedToRetrieveBars:)];
+    
     self.locationDelegate.movedQuiteABit = NO;
 }
 
@@ -49,6 +63,17 @@
               self.locationDelegate.lastKnownLatitude,
               self.locationDelegate.lastKnownLongitude);
     }
+}
+
+- (void)retrievedBars:(NSData*)barContent
+{
+    // barContent is JSON, parse and stick it into Bar objects; stick those in
+    // an NSArray and attach to localBars.
+}
+
+- (void)failedToRetrieveBars:(id)errorObject
+{
+    NSLog(@"failed to retrieve local bars.");
 }
 
 @end
