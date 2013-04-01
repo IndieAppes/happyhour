@@ -16,12 +16,6 @@
     NSLog(@"new location %f %f",
           newLocation.coordinate.latitude,
           newLocation.coordinate.longitude);
-    
-//    UILocalNotification *noti = [[UILocalNotification alloc] init];
-//    noti.alertBody = @"Pay attention!";
-//    noti.fireDate = nil;
-//    
-//    [[UIApplication sharedApplication] presentLocalNotificationNow:noti];
 }
 
 @end
