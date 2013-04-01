@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Download : NSObject
+@interface Download : NSObject {
+    NSURLConnection *connection;
+}
+
+- (void)postToURL:(NSURL*)url postdata:(NSData*)postData delegate:(id)delegate onSuccess:(SEL)successMethod onFail:(SEL)failureMethod;
+- (void)getFromURL:(NSURL*)url delegate:(id)delegate onSuccess:(SEL)successMethod onFail:(SEL)failureMethod;
 
 @end
