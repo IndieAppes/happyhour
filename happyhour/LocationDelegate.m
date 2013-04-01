@@ -10,9 +10,17 @@
 
 @implementation LocationDelegate
 
+@synthesize lastKnownLatitude;
+@synthesize lastKnownLongitude;
+
 - (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations {
+     didUpdateLocations:(NSArray *)locations
+{
     CLLocation *newLocation = [locations lastObject];
+
+    self.lastKnownLatitude = newLocation.coordinate.latitude;
+    self.lastKnownLongitude = newLocation.coordinate.longitude;
+    
     NSLog(@"new location %f %f",
           newLocation.coordinate.latitude,
           newLocation.coordinate.longitude);

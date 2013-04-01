@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocationDelegate.h"
 
 @interface UpdateManager : NSObject
 
+@property (strong) NSArray *localBars;
+@property (strong, nonatomic) LocationDelegate* locationDelegate;
+
 - (NSURL*)getUpdateURL;
+- (void)updateBars;
+- (void)checkForNewHappyHours;
 
 @end

@@ -11,6 +11,9 @@
 
 @interface LocationDelegate : NSObject <CLLocationManagerDelegate>
 
+@property double lastKnownLatitude;
+@property double lastKnownLongitude;
+
 - (void)locationManager:(CLLocationManager *)manage didUpdateLocations:(NSArray *)locations;
 
 @end

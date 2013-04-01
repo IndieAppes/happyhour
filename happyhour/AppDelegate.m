@@ -27,6 +27,8 @@
     [self.window makeKeyAndVisible];
 
     locationDelegate = [[LocationDelegate alloc] init];
+    updateManager = [[UpdateManager alloc] init];
+    updateManager.locationDelegate = locationDelegate;
     
     // Set up global Location Manager.
     locationManager = [[CLLocationManager alloc] init];
@@ -37,6 +39,12 @@
                                               intValue];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
+    
+    [NSTimer scheduledTimerWithTimeInterval:60.0
+                                     target:updateManager
+                                   selector:@selector(checkForNewHappyHours)
+                                   userInfo:nil
+                                    repeats:YES];
 
     return YES;
 }
@@ -63,7 +71,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // noop
+
 }
 
 /*
