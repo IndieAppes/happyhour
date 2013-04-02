@@ -63,6 +63,10 @@
                           initWithFormat:@"latitude=%.6f&longitude=%.6f",
                           self.locationDelegate.lastKnownLatitude,
                           self.locationDelegate.lastKnownLongitude];
+
+    // Placeholder. Need to yoink content or find another way
+    // localBars = [self parseBarsArray:[NSArray arrayWithContentsOfURL:[self getUpdateURL]]];
+
     Download *dl = [[Download alloc] init];
     [dl postToURL:[self getUpdateURL]
          postdata:[postData dataUsingEncoding:NSUTF8StringEncoding]
@@ -71,6 +75,12 @@
            onFail:@selector(failedToRetrieveBars:)];
     
     self.locationDelegate.movedQuiteABit = NO;
+}
+
+- (NSArray *)parseBarsArray:(NSArray*)barsArray
+{
+    NSMutableArray *newBars = [[NSMutableArray alloc] init];
+    return [[NSArray alloc] initWithArray:newBars];
 }
 
 - (NSArray *)getBarsNearMe
