@@ -8,6 +8,7 @@
 
 #import "UpdateManager.h"
 #import "Download.h"
+#import "Bar.h"
 
 @implementation UpdateManager
 
@@ -27,21 +28,44 @@
     return url;
 }
 
+// Generation method because I don't know how to initialise and fill a struct on
+// one line, hth.
+- (CLLocationCoordinate2D)generateStructWithLongitude:(CLLocationDegrees)longitude latitude:(CLLocationDegrees)latitude
+{
+    CLLocationCoordinate2D coord;
+    coord.longitude = longitude;
+    coord.latitude = latitude;
+    
+    return coord;
+}
+
 - (void)updateBars
 {
-    localBars = [[NSArray alloc] initWithObjects:@"dicks",
-                 @"dongues", @"YOSPOS", @"BITCH", nil];
-    NSLog(@"Updating bars near %f %f",
-          self.locationDelegate.lastKnownLatitude,
-          self.locationDelegate.lastKnownLongitude);
+    // I'm just going to do some mock-bars here. Ignore the ugliness and
+    // everything for now, it'll be prettier later.
+    
+    Bar *bar1 = [[Bar alloc] init];
+    bar1.location = [self generateStructWithLongitude:1.0 latitude:1.0];
+    bar1.name = @"Testbar 1";
+
+    Bar *bar2 = [[Bar alloc] init];
+    bar2.location = [self generateStructWithLongitude:1.0 latitude:1.0];
+    bar2.name = @"Testbar 2";
+    
+    Bar *bar3 = [[Bar alloc] init];
+    bar3.location = [self generateStructWithLongitude:1.0 latitude:1.0];
+    bar3.name = @"Testbar 3";
+    
+    Bar *bar4 = [[Bar alloc] init];
+    bar4.location = [self generateStructWithLongitude:1.0 latitude:1.0];
+    bar4.name = @"Testbar 4";
+    
+    localBars = [[NSArray alloc] initWithObjects:bar1, bar2, bar3, bar4, nil];
     
     NSString *postData = [[NSString alloc]
                           initWithFormat:@"latitude=%.6f&longitude=%.6f",
                           self.locationDelegate.lastKnownLatitude,
                           self.locationDelegate.lastKnownLongitude];
-    NSLog(@"latitude=%.6f&longitude=%.6f",
-          self.locationDelegate.lastKnownLatitude,
-          self.locationDelegate.lastKnownLongitude);
     Download *dl = [[Download alloc] init];
     [dl postToURL:[self getUpdateURL]
          postdata:[postData dataUsingEncoding:NSUTF8StringEncoding]
