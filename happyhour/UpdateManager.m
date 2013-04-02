@@ -84,9 +84,6 @@
         [self updateBars];
     }
     else {
-        NSLog(@"Checking happy hours near %f %f",
-              self.locationDelegate.lastKnownLatitude,
-              self.locationDelegate.lastKnownLongitude);
         for (Bar *bar in localBars) {
             if ([self.locationDelegate nearLocation:bar.location] &&
                 ([bar hasHappyHour] || [bar happyHourEnding]))
