@@ -20,4 +20,14 @@
 @synthesize happyHourTimes;
 @synthesize address;
 
+- (id)initWithLocation:(CLLocationCoordinate2D)loc
+                  name:(NSString*)nam
+{
+    if (self = [super init]) {
+        self.location = loc;
+        self.name = nam;
+    }
+    return self;
+}
+
 @end

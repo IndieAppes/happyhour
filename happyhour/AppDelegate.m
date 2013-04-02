@@ -46,7 +46,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     
-    [NSTimer scheduledTimerWithTimeInterval:60.0
+    [NSTimer scheduledTimerWithTimeInterval:15.0
                                      target:updateManager
                                    selector:@selector(checkForNewHappyHours)
                                    userInfo:nil

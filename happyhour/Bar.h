@@ -21,4 +21,6 @@
 @property (atomic) NSArray *happyHourTimes;
 @property (atomic) NSString *address;
 
+- (id)initWithLocation:(CLLocationCoordinate2D)location name:(NSString*)name;
+
 @end

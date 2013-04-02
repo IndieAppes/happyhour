@@ -30,12 +30,12 @@
 
 // Generation method because I don't know how to initialise and fill a struct on
 // one line, hth.
-- (CLLocationCoordinate2D)generateStructWithLongitude:(CLLocationDegrees)longitude latitude:(CLLocationDegrees)latitude
+- (CLLocationCoordinate2D)generateStructWithLongitude:(CLLocationDegrees)longitude
+                                             latitude:(CLLocationDegrees)latitude
 {
     CLLocationCoordinate2D coord;
     coord.longitude = longitude;
     coord.latitude = latitude;
-    
     return coord;
 }
 
@@ -44,21 +44,18 @@
     // I'm just going to do some mock-bars here. Ignore the ugliness and
     // everything for now, it'll be prettier later.
     
-    Bar *bar1 = [[Bar alloc] init];
-    bar1.location = [self generateStructWithLongitude:1.0 latitude:1.0];
-    bar1.name = @"Testbar 1";
-
-    Bar *bar2 = [[Bar alloc] init];
-    bar2.location = [self generateStructWithLongitude:1.0 latitude:1.0];
-    bar2.name = @"Testbar 2";
-    
-    Bar *bar3 = [[Bar alloc] init];
-    bar3.location = [self generateStructWithLongitude:1.0 latitude:1.0];
-    bar3.name = @"Testbar 3";
-    
-    Bar *bar4 = [[Bar alloc] init];
-    bar4.location = [self generateStructWithLongitude:1.0 latitude:1.0];
-    bar4.name = @"Testbar 4";
+    Bar *bar1 = [[Bar alloc] initWithLocation:[self generateStructWithLongitude:52.075628
+                                                                       latitude:4.308702]
+                                         name:@"Testbar 1"];
+    Bar *bar2 = [[Bar alloc] initWithLocation:[self generateStructWithLongitude:1.0
+                                                                       latitude:1.0]
+                                         name:@"Testbar 2"];
+    Bar *bar3 = [[Bar alloc] initWithLocation:[self generateStructWithLongitude:1.0
+                                                                       latitude:1.0]
+                                         name:@"Testbar 3"];
+    Bar *bar4 = [[Bar alloc] initWithLocation:[self generateStructWithLongitude:1.0
+                                                                       latitude:1.0]
+                                         name:@"Testbar 4"];
     
     localBars = [[NSArray alloc] initWithObjects:bar1, bar2, bar3, bar4, nil];
     
@@ -90,6 +87,10 @@
         NSLog(@"Checking happy hours near %f %f",
               self.locationDelegate.lastKnownLatitude,
               self.locationDelegate.lastKnownLongitude);
+        NSLog(@"Found %d bars near me", [localBars count]);
+        for (id object in localBars) {
+            NSLog(@"Bar %@ is near!", [object name]);
+        }
     }
 }
 
