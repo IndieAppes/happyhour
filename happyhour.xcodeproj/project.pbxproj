@@ -12,6 +12,7 @@
 		5231BC8A1708C23300B98E4A /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231BC891708C23300B98E4A /* Download.m */; };
 		5243293C1707491900164B6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243293B1707491900164B6C /* CoreLocation.framework */; };
 		526931C417073A790060F521 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526931C317073A790060F521 /* MapKit.framework */; };
+		5277366B170AB8C300BD3265 /* OpeningHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277366A170AB8C300BD3265 /* OpeningHours.m */; };
 		5294F8CD17070C7500E0F243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CC17070C7500E0F243 /* UIKit.framework */; };
 		5294F8CF17070C7500E0F243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8CE17070C7500E0F243 /* Foundation.framework */; };
 		5294F8D117070C7500E0F243 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294F8D017070C7500E0F243 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		5231BC891708C23300B98E4A /* Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Download.m; sourceTree = "<group>"; };
 		5243293B1707491900164B6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		526931C317073A790060F521 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		52773669170AB8C300BD3265 /* OpeningHours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningHours.h; sourceTree = "<group>"; };
+		5277366A170AB8C300BD3265 /* OpeningHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningHours.m; sourceTree = "<group>"; };
 		5294F8C917070C7500E0F243 /* happyhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5294F8CC17070C7500E0F243 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5294F8CE17070C7500E0F243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -156,6 +159,8 @@
 				52B2E6511708C46E000A56FC /* Bar.m */,
 				5231BC881708C23300B98E4A /* Download.h */,
 				5231BC891708C23300B98E4A /* Download.m */,
+				52773669170AB8C300BD3265 /* OpeningHours.h */,
+				5277366A170AB8C300BD3265 /* OpeningHours.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				5231BC8A1708C23300B98E4A /* Download.m in Sources */,
 				52B2E6521708C46E000A56FC /* Bar.m in Sources */,
 				521F0BAD1709A06700F12691 /* LocationDelegate.m in Sources */,
+				5277366B170AB8C300BD3265 /* OpeningHours.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
