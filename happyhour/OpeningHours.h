@@ -10,4 +10,8 @@
 
 @interface OpeningHours : NSObject
 
+@property int start;
+@property int end;
+@property int dayOfWeek;
+
 @end

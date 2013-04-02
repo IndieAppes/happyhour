@@ -10,4 +10,8 @@
 
 @implementation OpeningHours
 
+@synthesize start;
+@synthesize end;
+@synthesize dayOfWeek;
+
 @end
