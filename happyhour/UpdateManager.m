@@ -88,8 +88,10 @@
               self.locationDelegate.lastKnownLatitude,
               self.locationDelegate.lastKnownLongitude);
         for (Bar *bar in localBars) {
-            if ([self.locationDelegate nearLocation:bar.location]) {
-                NSLog(@"Bar %@ is near!", bar.name);
+            if ([self.locationDelegate nearLocation:bar.location] &&
+                ([bar hasHappyHour] || [bar happyHourEnding]))
+            {
+                NSLog(@"I should now alert the user!");
             }
         }
     }

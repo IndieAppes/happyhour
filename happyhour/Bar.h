@@ -22,5 +22,7 @@
 @property (atomic) NSString *address;
 
 - (id)initWithLocation:(CLLocationCoordinate2D)location name:(NSString*)name;
+- (BOOL)hasHappyHour;
+- (BOOL)happyHourEnding;
 
 @end

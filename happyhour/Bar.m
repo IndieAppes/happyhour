@@ -30,4 +30,14 @@
     return self;
 }
 
+- (BOOL)hasHappyHour
+{
+    return NO;
+}
+
+- (BOOL)happyHourEnding
+{
+    return NO;
+}
+
 @end

@@ -22,14 +22,12 @@
     // Check if we're not NEAR the new location. If we aren't, set the
     // movedQuiteABit thing to YES. We should never set it to NO and leave that
     // to the updateManager.
-    if (![self nearLocation:[newLocation coordinate]]) {
+    if (![self nearLocation:newLocation.coordinate]) {
         self.movedQuiteABit = YES;
     }
 
     self.lastKnownLatitude = newLocation.coordinate.latitude;
     self.lastKnownLongitude = newLocation.coordinate.longitude;
-    
-    NSLog(@"Boing: %f %f", self.lastKnownLatitude, self.lastKnownLongitude);
 }
 
 - (BOOL)nearLocation:(CLLocationCoordinate2D)location
