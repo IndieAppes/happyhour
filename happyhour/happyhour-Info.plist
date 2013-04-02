@@ -24,6 +24,8 @@
 	<string>http://192.168.178.14:8000/</string>
 	<key>UpdateDistanceFilter</key>
 	<integer>25</integer>
+	<key>UpdateBarFrequency</key>
+	<string>15</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>

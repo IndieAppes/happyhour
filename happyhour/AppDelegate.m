@@ -39,14 +39,17 @@
     // Set up global Location Manager.
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = locationDelegate;
-    locationManager.distanceFilter = (double)[[[[NSBundle mainBundle]
-                                                infoDictionary]
-                                               objectForKey:@"UpdateDistanceFilter"]
-                                              intValue];
+    locationManager.distanceFilter = [[[[NSBundle mainBundle]
+                                        infoDictionary]
+                                       objectForKey:@"UpdateDistanceFilter"]
+                                      doubleValue];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     
-    [NSTimer scheduledTimerWithTimeInterval:15.0
+    [NSTimer scheduledTimerWithTimeInterval:[[[[NSBundle mainBundle]
+                                               infoDictionary]
+                                              objectForKey:@"UpdateBarFrequency"]
+                                             doubleValue]
                                      target:updateManager
                                    selector:@selector(checkForNewHappyHours)
                                    userInfo:nil
