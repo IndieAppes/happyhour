@@ -18,17 +18,11 @@
      didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = [locations lastObject];
-    CLLocation *oldLocation = [[CLLocation alloc]
-                               initWithLatitude:self.lastKnownLatitude
-                               longitude:self.lastKnownLongitude];
-    CLLocationDistance dist = [newLocation distanceFromLocation:oldLocation];
-    
-    double distanceFilter = (double)[[[[NSBundle mainBundle]
-                                       infoDictionary]
-                                      objectForKey:@"UpdateDistanceFilter"]
-                                     intValue];
-    
-    if (dist > distanceFilter) {
+
+    // Check if we're not NEAR the new location. If we aren't, set the
+    // movedQuiteABit thing to YES. We should never set it to NO and leave that
+    // to the updateManager.
+    if (![self nearLocation:[newLocation coordinate]]) {
         self.movedQuiteABit = YES;
     }
 
@@ -36,6 +30,25 @@
     self.lastKnownLongitude = newLocation.coordinate.longitude;
     
     NSLog(@"Boing: %f %f", self.lastKnownLatitude, self.lastKnownLongitude);
+}
+
+- (BOOL)nearLocation:(CLLocationCoordinate2D)location
+{
+    CLLocation *newLocation = [[CLLocation alloc]
+                               initWithLatitude:location.latitude
+                               longitude:location.longitude];
+    CLLocation *oldLocation = [[CLLocation alloc]
+                               initWithLatitude:self.lastKnownLatitude
+                               longitude:self.lastKnownLongitude];
+    
+    CLLocationDistance dist = [newLocation distanceFromLocation:oldLocation];
+    
+    double distanceFilter = [[[[NSBundle mainBundle]
+                               infoDictionary]
+                              objectForKey:@"UpdateDistanceFilter"]
+                             doubleValue];
+
+    return !(dist > distanceFilter);
 }
 
 @end

@@ -16,5 +16,6 @@
 @property BOOL movedQuiteABit;
 
 - (void)locationManager:(CLLocationManager *)manage didUpdateLocations:(NSArray *)locations;
+- (BOOL)nearLocation:(CLLocationCoordinate2D)location;
 
 @end
