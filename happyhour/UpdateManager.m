@@ -17,13 +17,10 @@
 
 - (NSURL *)getUpdateURL
 {
-    NSString *path = [[NSString alloc]
-                      initWithCString:"/getBarsNearMe"
-                      encoding:NSUTF8StringEncoding];
     NSURL *base = [[NSURL alloc] initWithString:[[[NSBundle mainBundle]
                                                   infoDictionary]
                                                  objectForKey:@"UpdateServer"]];
-    NSURL *url = [NSURL URLWithString:path relativeToURL:base];
+    NSURL *url = [NSURL URLWithString:@"/getBarsNearMe" relativeToURL:base];
 
     return url;
 }
