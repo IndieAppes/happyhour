@@ -15,7 +15,9 @@
 @property double lastKnownLongitude;
 @property BOOL movedQuiteABit;
 
-- (void)locationManager:(CLLocationManager *)manage didUpdateLocations:(NSArray *)locations;
-- (BOOL)nearLocation:(CLLocationCoordinate2D)location;
+- (void)locationManager:(CLLocationManager *)manage
+     didUpdateLocations:(NSArray *)locations;
+- (BOOL)nearLocation:(CLLocationCoordinate2D)location
+   allowableDistance:(CLLocationDistance)distance;
 
 @end

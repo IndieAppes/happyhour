@@ -95,7 +95,7 @@
     }
     else {
         for (Bar *bar in localBars) {
-            if ([self.locationDelegate nearLocation:bar.location] &&
+            if ([self.locationDelegate nearLocation:bar.location allowableDistance:1000.0] &&
                 ([bar hasHappyHour] || [bar happyHourEnding]))
             {
                 NSLog(@"I should now alert the user!");
