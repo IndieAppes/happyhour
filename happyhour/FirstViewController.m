@@ -25,6 +25,7 @@
         updateManager:(UpdateManager*)sentUpdateManager
 {
     self.updateManager = sentUpdateManager;
+    self.updateManager.mapView = self.mapView;
     return [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 }
 
@@ -43,8 +44,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CLLocationCoordinate2D coord = [self.updateManager getCurrentLocation];
-    [self.mapView setCenterCoordinate:coord animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

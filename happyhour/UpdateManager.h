@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 #import "LocationDelegate.h"
 
 @interface UpdateManager : NSObject
 
 @property (strong) NSArray *localBars;
 @property (strong, nonatomic) LocationDelegate* locationDelegate;
+@property (strong, atomic) MKMapView *mapView;
 
 - (NSURL*)getUpdateURL;
 - (void)updateBars;

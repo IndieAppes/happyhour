@@ -5,6 +5,7 @@
 //  Created by John Kraal on 3/31/13.
 //  Copyright (c) 2013 fancyappes. All rights reserved.
 //
+// This thing is turning into a god-class
 
 #import "UpdateManager.h"
 #import "Download.h"
@@ -87,7 +88,10 @@
 
 - (void)checkForNewHappyHours
 {
+    NSLog(@"checking");
     if (self.locationDelegate.movedQuiteABit == YES) {
+        [self.mapView setCenterCoordinate:[self getCurrentLocation]
+                                 animated:YES];
         [self updateBars];
     }
     else {
